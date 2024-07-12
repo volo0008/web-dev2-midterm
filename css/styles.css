@@ -14,7 +14,7 @@
     background-color: white;
     color: black;
     padding: .5em 1em;
-    font-weight: regular;
+    font-weight: normal;
     border: 3px solid rgb(255, 132, 208);
 }
 
@@ -87,7 +87,7 @@ nav ul {
 nav ul li {
     float: left;
     list-style-type: none;
-    margin-right: 10px 0;
+    margin: 10px 0;
 }
 
 nav ul li:nth-child(3) a {
@@ -100,11 +100,11 @@ nav ul li:nth-child(3) a:hover {
 }
 
 nav > h1 {
-    font-family: Playfair Display, serif;
+    font-family: "Playfair Display", serif;
 }
 
 .highlighted {
-    font-family: Playfair Display, serif;
+    font-family: "Playfair Display", serif;
 }
 
 /*--------------------------- * WRAPPER * ------------------------------------*/
@@ -135,19 +135,20 @@ main {
     background-size: 300% 100%;
     background-position: 0% 0%;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     animation: gradient 10s ease infinite;
 }
 
 @keyframes gradient {
     0% {
-        background-position: 0% 0%;
+        background-position: 0%, 0%;
     }
     50% {
-        background-position: 100% 0%;
+        background-position: 100%, 0%;
     }
     100% {
-        background-position: 0% 0%;
+        background-position: 0%, 0%;
     }
 }
 
