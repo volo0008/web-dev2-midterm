@@ -14,7 +14,7 @@
     background-color: white;
     color: black;
     padding: .5em 1em;
-    font-weight: bold;
+    font-weight: regular;
     border: 3px solid rgb(255, 132, 208);
 }
 
@@ -36,11 +36,6 @@
 }
 
 .skip-links a:focus {
-    top: 10px;
-}
-
-
-.skip-links a:focus {
     top: 0;
 }
 
@@ -52,36 +47,47 @@
         position: absolute;
         content: "";
         width: 95%;
-        height: 15px;
+        height: 10px;
         right: 0;
-        bottom: 10px;
-        top: 10px;
+        top: 12px;
         z-index: -1;
-        background: blue;
+        background: royalblue;
     }
 
-body {
-    max-width: 1000px;
-    margin: 0 auto;
-    background: black;
+/*--------------------------- * NAV * ------------------------------------*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    margin: 10px 5px;
 }
 
-
-/*--------------------------- * NAV * ------------------------------------*/
 nav a {
     text-decoration: none;
     display: block;
-    float: left;
     text-align: center;
     padding: 8px 15px;
-    margin-top: 30px;
+    margin: 20px 10px;
+    border-radius: 20px;
+    transition: transform 0.4s, background-color 0.4s, font-weight 0.4s, color 0.4s;
 }
 
 nav a:hover {
     background-color: rgb(63, 155, 192);
-    border-radius: 20px;
-    border: 3px solid rgb(255, 132, 208);
-    transition: transform 0.4s, background-color 0.4s;
+    color: black;
+    font-weight: bold;
+    transform: scale(1.1,1.1)
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    float: left;
+    list-style-type: none;
+    margin-right: 10px 0;
 }
 
 nav ul li:nth-child(3) a {
@@ -93,29 +99,22 @@ nav ul li:nth-child(3) a:hover {
     background-color: rgb(63, 155, 192);
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-    margin: 10px 0px;
-}
-
-
-
-nav ul li {
-    float: left;
-    list-style-type: none;
-    margin-right: 10px;
-}
-
-nav > h1, span {
+nav > h1 {
     font-family: Playfair Display, serif;
+}
 
+.highlighted {
+    font-family: Playfair Display, serif;
 }
 
 /*--------------------------- * WRAPPER * ------------------------------------*/
-.wrapper {
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: black;
+}
+
+main {
     position: relative;
 }
 
@@ -126,6 +125,35 @@ nav > h1, span {
     z-index: 2;
 }
 
+.top-text > h2 {
+    margin: 10px 0;
+    font-size: 2em;
+}
+
+.gradient {
+    background: linear-gradient(90deg, rgb(114, 212, 224), royalblue, rgb(114, 212, 224));
+    background-size: 300% 100%;
+    background-position: 0% 0%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+section > h2 {
+    margin: 50px 0 20px 0;
+}
 
 .image-container {
     overflow: hidden;
@@ -159,13 +187,17 @@ nav > h1, span {
     background-color: blueviolet;
     text-decoration: none;
     padding: 8px 15px;
+    margin: 20px 10px;
     border-radius: 20px;
-    transition: transform 0.4s, background-color 0.4s;
+    transition: transform 0.4s, background-color 0.4s, font-weight 0.4s, color 0.4s;
 }
 
 .planet a:hover {
     background-color: rgb(63, 155, 192);
-    border: 3px solid rgb(255, 132, 208);
+    transform: scale(1.1);
+    font-weight: bold;
+    color: black;
+    transform: scale(1.1,1.1)
 }
 
 .planet a:visited {
@@ -185,6 +217,7 @@ nav > h1, span {
 .planets img {
     width: 100%;
     height: auto;
+    margin-bottom: 10px;
 }
 
 hr {
@@ -195,6 +228,7 @@ hr {
 
 footer {
     text-align: center;
+    margin: 20px;
 }
 
 
@@ -203,8 +237,10 @@ footer {
 /***********************************MEDIA QUERIES********************************/
 
 @media only screen and (max-width: 900px) {
+    body {
+        padding: 0;
+    }
 
-    
     .planets {
         display: grid;
         gap: 1em;
@@ -242,7 +278,7 @@ footer {
      .top-text {
         text-align: center;
         font-size: 1em;
-        padding: 0px 50px;
+        padding: 0 50px;
      }
      .image-container img {
         width: 150%;

@@ -18,13 +18,13 @@
 <body>
     <div class="skip-menu">
         <ul class="skip-links">
-            <li><a href="#nav-list">Skip to main</a></li>
+            <li><a href="#planets">Skip to content</a></li>
             <li><a href="#footer">Skip to footer section</a></li>
           </ul>
     </div>
     
     <nav role="navigation">
-        <h1 role="heading">THE<span class="highlighted"> &nbsp;SYSTEM&nbsp;</span></h1>
+        <h1 role="heading">THE<span class="highlighted" role="heading"> &nbsp;SYSTEM&nbsp;</span></h1>
 
         <ul class="nav-list">
             <li><a href="#planets">Planets</a></li>
@@ -33,19 +33,21 @@
         </ul>
     </nav>
 
-    <main class="wrapper" role="banner">
+    <main role="main">
+        <div class="wrapper" role="banner">
         <div class="top-text">
             <p>THE SYSTEM MAGAZINE</p>
-            <h1>Welcome to the Solar System</h1>
+            <h2>Welcome to the <span class="gradient">Solar System</span></h2>
             <p>Take a tour around the coolest stellar system around</p>
+        </div>
         </div>
         
         <div class="image-container" role="img">
-            <img src="images/milky-way.jpg">
+            <img src="images/milky-way.jpg" alt="image of the Milky way">
         </div>
     </main>
 
-    <section role="main">
+    <section id="planets" aria-label="planets">
         <h2>Meet the Locals</h2>
         <div class="planets">
             <div class="planet">
@@ -86,7 +88,7 @@
         </div>
     </section>
     <hr>
-    <footer role="footer">
+    <footer id="footer" role="contentinfo">
         <p>&copy; 2024 - The System <a href="#nav-list">Back to Top</a></p>
     </footer>
 </body>
