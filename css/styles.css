@@ -19,7 +19,6 @@
     top: -3em;
     padding: .5em 1em;
     font-weight: normal;
-    border: 3px solid rgb(255, 132, 208);
     color:black;
 }
 
@@ -41,7 +40,7 @@
 
 a:focus {
     top: -15px;
-    border: 3px solid rgb(255, 132, 208)
+    outline: 3px solid rgb(255, 132, 208)
 }
 
 /*Highlighted stripe behind the System*/
